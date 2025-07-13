@@ -11,4 +11,19 @@ public class MainController {
 		return "index";
 		
 	}
+	@GetMapping("/login")
+	public String openloginpage()
+	{ 
+		return "login";
+		
+	}
+	@GetMapping("/profile")
+	public String openprofilepage()
+	{ 
+		return "profile";
+		
+	}
 }
+
+
+
