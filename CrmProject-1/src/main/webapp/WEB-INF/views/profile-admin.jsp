@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employee List - CRM</title>
+  <title>Admin</title>
 
   <!-- Bootstrap 5 CSS and JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
     <div class="container-fluid px-3">
       <div class="row">
         <div class="col-3 d-flex align-items-center">
-          <a href="#" class="navbar-brand text-light d-flex align-items-center ps-0">
+          <a href="profileadmin" class="navbar-brand text-light d-flex align-items-center ps-0">
             <img src="images/crmlogo-removebg-preview (1).png" alt="CRM Logo" width="40" height="40" class="me-2">
             CRM Application
           </a>
@@ -31,6 +31,7 @@
             <img src="images/profile.png" alt="Welcome Admin" style="width:40px;" class="rounded-pill"> 
             Admin
           </a>
+          <a href="login" class="text-light"> Logout</a>
         </div>
       </div>
     </div>
@@ -69,40 +70,9 @@
 
   <!-- Main Content -->
   <div class="container mt-4">
-    <h2>Employees List</h2>
-    <p>Below table displays only 10 employees</p>
-    <table class="table table-light table-bordered table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Employee Name</th>
-          <th scope="col">Employee Lastname</th>
-          <th scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <h2>Welcome Admin</h2>
+    <p>Now You Can Handle The Below Functionality</p>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 CRM Application. All Rights Reserved.</p>
-  </footer>
-
+  </div> 
 </body>
 </html>
