@@ -26,11 +26,12 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
         <ul class="navbar-nav">
+         <li class="nav-item"><a class="nav-link" href="profileadmin">Home</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Employees</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Add Employee</a></li>
-              <li><a class="dropdown-item" href="#">Employee List</a></li>
+              <li><a class="dropdown-item" href="addemployee">Add Employee</a></li>
+            
             </ul>
           </li>
           <li class="nav-item dropdown">

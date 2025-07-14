@@ -28,3 +28,12 @@ padding: 40px;
 box-shadow: 0px 0px 5px #cccc ;
 
 }
+.employee_login {
+  max-width: 300px;       
+  width: 100%;
+  margin: 0 auto;          
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
