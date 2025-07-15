@@ -31,7 +31,7 @@
             <img src="images/profile.png" alt="Welcome Admin" style="width:40px;" class="rounded-pill"> 
             Admin
           </a>
-          <a href="login" class="text-light"> Logout</a>
+          <a href="login" class="btn btn-sm btn-light">Logout</a>
         </div>
       </div>
     </div>
