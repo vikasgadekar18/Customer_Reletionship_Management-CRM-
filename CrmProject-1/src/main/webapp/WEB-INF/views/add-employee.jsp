@@ -84,7 +84,7 @@
 					<!-- Employee Form -->
 					<form action="addempform" method="post">
 						<div class="mb-3">
-							<label class="form-label">Enter Name</label>
+							<label class="form-label">Enter Full Name</label>
 							<input type="text" name="name1" class="form-control" required />
 						</div>
 						<div class="mb-3">

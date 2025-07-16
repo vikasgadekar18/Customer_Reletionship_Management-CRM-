@@ -1,5 +1,7 @@
 package in.sp.main.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +27,23 @@ public class EmpServiceimpl implements EmpService{
 		}
 		return status;
 	}
+
+	@Override
+	public List<Employee> getAllEmployeesService() {
+		
+		
+		
+		return empRepository.findAll();
+	}
+
+	@Override
+	public Employee login(String email) {
+		
+	 Employee emp=empRepository.findByEmail(email);
+		    return emp;
+	}
+
+
+
 
 }

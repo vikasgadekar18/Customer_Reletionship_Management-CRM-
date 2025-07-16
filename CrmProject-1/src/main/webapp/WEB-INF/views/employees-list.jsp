@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"
+	import="java.util.List, in.sp.main.entity.Employee"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Employee List - CRM</title>
 
-<!-- Bootstrap 5 CSS and JS -->
+<!-- Bootstrap 5 CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet" />
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="CSS/style.css" />
 </head>
 <body>
+
 	<!-- Header -->
-	<div class="container-fluid bg-primary text-white py-2 px-4">
+	<div class="container-fluid bg-primary text-white py-3 px-4">
 		<div class="row align-items-center">
 			<div class="col-md-4 d-flex align-items-center">
 				<img src="images/crmlogo-removebg-preview (1).png" alt="CRM Logo"
@@ -28,75 +28,80 @@
 			</div>
 			<div class="col-md-4"></div>
 			<div class="col-md-4 d-flex justify-content-end align-items-center">
-				<img src="images/profile1.png" alt="Admin" class="rounded-pill me-2"
-					style="width: 40px;"> <span class="me-3">Admin</span> <a
-					href="login" class="btn btn-sm btn-light">Logout</a>
+				<img src="images/profile1.png" alt="Admin"
+					class="rounded-circle me-2" style="width: 40px;"> <span
+					class="me-3">Admin</span> <a href="login"
+					class="btn btn-sm btn-light">Logout</a>
 			</div>
 		</div>
 	</div>
 
-	<!-- Navigation Bar -->
-	<nav class="navbar navbar-expand-sm bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#"></a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse justify-content-center"
-				id="collapsibleNavbar">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="profileadmin">Home</a></li>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" role="button"
-						data-bs-toggle="dropdown">Employees</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="addemployee">Add
-									Employee</a></li>
-
-						</ul></li>
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" role="button"
-						data-bs-toggle="dropdown">Products</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Add Product</a></li>
-							<li><a class="dropdown-item" href="#">Product List</a></li>
-						</ul></li>
-					<li class="nav-item"><a class="nav-link" href="#">Complaints</a>
-					</li>
-				</ul>
-			</div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<div class="container-fluid justify-content-center">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="profileadmin">Home</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" role="button"
+					data-bs-toggle="dropdown">Employees</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="addemployee">Add
+								Employee</a></li>
+					</ul></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" role="button"
+					data-bs-toggle="dropdown">Products</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Add Product</a></li>
+						<li><a class="dropdown-item" href="#">Product List</a></li>
+					</ul></li>
+				<li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
+			</ul>
 		</div>
 	</nav>
 
 	<!-- Main Content -->
 	<div class="container mt-4">
 		<h2>Employees List</h2>
-		<p>Below table displays only 10 employees</p>
-		<table class="table table-light table-bordered table-striped">
-			<thead>
+		<p>This table displays the employees fetched from the backend.</p>
+
+		<table class="table table-bordered table-striped table-hover">
+			<thead class="table-dark">
 				<tr>
-					<th scope="col">Employee Name</th>
-					<th scope="col">Employee Lastname</th>
-					<th scope="col">Email</th>
+					<th>Employee Full Name</th>
+					<th>Email</th>
+					<th>Phone Number</th>
+					<th style="text-align: center;">Update</th>
+					<th style="text-align: center;">Delete</th>
 				</tr>
 			</thead>
 			<tbody>
+				<%
+				List<Employee> employeeList = (List<Employee>) request.getAttribute("model_list_emp");
+
+				if (employeeList != null && !employeeList.isEmpty()) {
+					for (Employee employee : employeeList) {
+				%>
 				<tr>
-					<td>John</td>
-					<td>Doe</td>
-					<td>john@example.com</td>
+					<td><%=employee.getName()%></td>
+					<td><%=employee.getEmail()%></td>
+					<td><%=employee.getPhoneno()%></td>
+					<td style="text-align: center;"><a href="#" style="color: green;"><i class="bi bi-pencil-square"></i></a></td>
+					<td style="text-align: center;"><a href="#" style="color: red"> <i class="bi bi-trash3-fill"></i>
+					</a>
+					</td>
 				</tr>
+				<%
+				}
+				} else {
+				%>
 				<tr>
-					<td>Mary</td>
-					<td>Moe</td>
-					<td>mary@example.com</td>
+					<td colspan="3" class="text-center text-danger">No employees
+						found.</td>
 				</tr>
-				<tr>
-					<td>July</td>
-					<td>Dooley</td>
-					<td>july@example.com</td>
-				</tr>
+				<%
+				}
+				%>
 			</tbody>
 		</table>
 	</div>
@@ -106,5 +111,8 @@
 		<p class="mb-0">&copy; 2025 CRM Application. All Rights Reserved.</p>
 	</footer>
 
+	<!-- Bootstrap JS Bundle -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

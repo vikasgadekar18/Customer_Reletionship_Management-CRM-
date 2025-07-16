@@ -1,5 +1,7 @@
 package in.sp.main.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import in.sp.main.entity.Employee;
 import in.sp.main.service.EmpService;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MainController {
@@ -33,7 +36,11 @@ public class MainController {
 	}
 
 	@GetMapping("/emplist")
-	public String openEmplistpage() {
+	public String openEmplistpage( Model model) {
+			
+	List<Employee> list_emp = empService.getAllEmployeesService();
+	model.addAttribute("model_list_emp", list_emp);
+	   
 		return "employees-list";
 
 	}
@@ -52,7 +59,8 @@ public class MainController {
 	public String loginform(
 
 			@RequestParam("email1") String myemail, @RequestParam("pass1") String mypass,
-			Model model
+			Model model,
+			HttpSession session
 			
 			) {
 		
@@ -63,8 +71,17 @@ public class MainController {
 			page = "profile-admin";
 
 		} else {
-            model.addAttribute("model_error", "Email id and Password are didnt match");
-			page = "login";
+			 Employee emp = empService.login(myemail);
+			 if(emp!=null && emp.getPassword().equals(mypass)) {
+				 session.setAttribute("session_emp", emp);
+				 page="profile-employee";
+				 
+			 }
+			 
+			 else {
+				 model.addAttribute("model_error", "Email id and Password are didnt match");
+					page = "login";
+			 }
 
 		}
 
@@ -97,5 +114,11 @@ public class MainController {
 		}
 		
 		return "add-employee";
+	}
+
+	@GetMapping("/logout")
+	public String logut( HttpSession session) {
+		session.invalidate();
+		return "login";
 	}
 }
