@@ -97,7 +97,7 @@
 						</div>
 						<div class="mb-3">
 							<label class="form-label">Enter Phone Number</label>
-							<input type="text" name="phone1" class="form-control" required />
+							<input type="number" name="phone1" class="form-control" required />
 						</div>
 						<div class="text-center">
 							<input type="submit" value="Register" class="btn btn-primary" />

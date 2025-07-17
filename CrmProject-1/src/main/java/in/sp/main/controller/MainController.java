@@ -8,15 +8,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import in.sp.main.CrmProject1Application;
 import in.sp.main.entity.Employee;
 import in.sp.main.service.EmpService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MainController {
+
+    private final CrmProject1Application crmProject1Application;
 	@Autowired
 	EmpService empService;
+
+    MainController(CrmProject1Application crmProject1Application) {
+        this.crmProject1Application = crmProject1Application;
+    }
 	@GetMapping("/")
 	public String openindexpage() {
 		return "index";
@@ -34,11 +40,16 @@ public class MainController {
 		return "login";
 
 	}
-
+  int page_size=10;
 	@GetMapping("/emplist")
 	public String openEmplistpage( Model model) {
 			
 	List<Employee> list_emp = empService.getAllEmployeesService();
+	int total_products=list_emp.size();
+	int total_page= (int) Math.ceil((double)total_products/page_size);
+	System.out.println("total_pages"+total_page);
+	
+	
 	model.addAttribute("model_list_emp", list_emp);
 	   
 		return "employees-list";
