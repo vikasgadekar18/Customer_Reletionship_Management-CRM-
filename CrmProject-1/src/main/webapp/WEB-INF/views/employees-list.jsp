@@ -104,6 +104,9 @@
 				%>
 			</tbody>
 		</table>
+		<%
+		   
+		%>
 	</div>
 
 	<!-- Footer -->

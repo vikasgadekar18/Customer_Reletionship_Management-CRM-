@@ -42,15 +42,20 @@ public class MainController {
 	}
   int page_size=10;
 	@GetMapping("/emplist")
-	public String openEmplistpage( Model model) {
+	public String openEmplistpage( Model model, @RequestParam(defaultValue = "1")int page) {
 			
 	List<Employee> list_emp = empService.getAllEmployeesService();
 	int total_products=list_emp.size();
-	int total_page= (int) Math.ceil((double)total_products/page_size);
-	System.out.println("total_pages"+total_page);
+	int total_pages= (int) Math.ceil((double)total_products/page_size);
+	
+	int List_Start_Index=(page-1)*page_size;
+	int List_End_Index=  Math.min( List_Start_Index+page_size,total_products);
+	List<Employee> new_list_emp=list_emp.subList(List_Start_Index, List_End_Index);
 	
 	
-	model.addAttribute("model_list_emp", list_emp);
+	model.addAttribute("model_list_emp", new_list_emp);
+	model.addAttribute("model_total_pages",total_pages);
+	model.addAttribute("model_current_page", new_list_emp);
 	   
 		return "employees-list";
 
