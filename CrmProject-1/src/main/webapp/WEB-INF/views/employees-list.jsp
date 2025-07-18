@@ -17,7 +17,6 @@
 	rel="stylesheet" />
 </head>
 <body>
-
 	<!-- Header -->
 	<div class="container-fluid bg-primary text-white py-3 px-4">
 		<div class="row align-items-center">
