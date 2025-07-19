@@ -24,7 +24,7 @@
 		<div class="container-fluid px-3">
 			<div class="row">
 				<div class="col-3 d-flex align-items-center">
-					<a href="profile-employee"
+					<a href="employeehome"
 						class="navbar-brand text-light d-flex align-items-center ps-0">
 						<img src="images/crmlogo-removebg-preview (1).png" alt="CRM Logo"
 						width="40" height="40" class="me-2"> CRM Application
@@ -32,7 +32,7 @@
 				</div>
 				<div class="col-6"></div>
 				<div class="col-3 d-flex align-items-center justify-content-end">
-					<a class="navbar-brand text-light" href="employeehome"> <img
+					<a class="navbar-brand text-light" href="#"> <img
 						src="images/profile.png" alt="Welcome Admin" style="width: 40px;"
 						class="rounded-pill"> ${session_emp.getName()}
 					</a> <a href="logout" class="btn btn-sm btn-light">Logout</a>
@@ -46,11 +46,10 @@
     <div class="container justify-content-center">
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="employeehome">Home</a></li>
-                 <li class="nav-item"><a class="nav-link" href="index">Customer Enquiry</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Customer Follow Ups</a></li>
-                   <li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
-
+                <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                 <li class="nav-item"><a class="nav-link" href="">Customer Enquiry</a></li>
+                  <li class="nav-item"><a class="nav-link" href="profileadmin">Customer Follow Ups</a></li>
+                   <li class="nav-item"><a class="nav-link" href="profileadmin">Complaints</a></li>
             </ul>
         </div>
     </div>
@@ -58,6 +57,8 @@
 	
 	<div class="container mt-4">
 		<h2>Welcome: ${session_emp.getName()}</h2>
-		<p>Now You Can Handle The Below Functionality</p>
+		<h3>Email: ${session_emp.getEmail()</h3>
+		<h3>Email: ${session_emp.getPhoneno()</h3>
+		
 
 	</div>

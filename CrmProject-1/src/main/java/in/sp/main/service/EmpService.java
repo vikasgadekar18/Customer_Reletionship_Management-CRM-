@@ -11,5 +11,12 @@ public interface EmpService {
 	public boolean addEmployeeservice(Employee emp);
 	
 	public List<Employee> getAllEmployeesService();
+	
+	boolean deleteEmployeeService(int empId);
+	
+	boolean  updateEmployeeService(Employee emp);
+	Employee getEmployeeById(int id);
+
+
 
 }

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Employee</title>
+    <title>Add Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- Bootstrap 5 CSS -->
@@ -67,7 +67,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow p-4">
-                    <h4 class="text-center mb-3">Register Employee</h4>
+                    <h4 class="text-center mb-3">Add Course Details</h4>
 
                     <!-- Success or Error Messages -->
                     <% if (request.getAttribute("model_success") != null) { %>
@@ -83,29 +83,59 @@
                     <% } %>
 
                     <!-- Employee Form -->
-                    <form:form action="addempform" method="post" modelAttribute="employee">
+                    <form:form action="addempform" method="post" >
                         <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <form:input path="name" cssClass="form-control" />
-                            <form:errors path="name" cssClass="text-danger small" />
+                            <label class="form-label">Course Name</label>
+                            <form:input path="coursename" cssClass="form-control" />
+                            <form:errors path="coursename" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <form:input path="email" type="email" cssClass="form-control" />
-                            <form:errors path="email" cssClass="text-danger small" />
+                            <label class="form-label">Course Syllabus</label>
+                            <form:input path="syllabus" type="email" cssClass="form-control" />
+                            <form:errors path="syllabus" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <form:password path="password" cssClass="form-control" />
-                            <form:errors path="password" cssClass="text-danger small" />
+                            <label class="form-label">Course Original Price</label>
+                            <form:input path="originalprice" cssClass="form-control" />
+                            <form:errors path="originalprice" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Phone Number</label>
-                            <form:input path="phoneno" cssClass="form-control" />
-                            <form:errors path="phoneno" cssClass="text-danger small" />
+                            <label class="form-label">Course Discounted Price</label>
+                            <form:input path="discountedprice" cssClass="form-control" />
+                            <form:errors path="discountedprice" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Course Validity</label>
+                            <form:input path="coursevalidity" cssClass="form-control" />
+                            <form:errors path="coursevalidity" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Course Image</label>
+                            <form:input path="courseimage" cssClass="form-control" />
+                            <form:errors path="courseimage" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Trainers Details</label>
+                            <form:input path="trainersdetails" cssClass="form-control" />
+                            <form:errors path="trainersdetails" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Trainers image</label>
+                            <form:input path="trainersimage" cssClass="form-control" />
+                            <form:errors path="trainersimage" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Other Details</label>
+                            <form:input path="otherdetails" cssClass="form-control" />
+                            <form:errors path="otherdetails" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Trainers Name</label>
+                            <form:input path="trainersname" cssClass="form-control" />
+                            <form:errors path="trainersname" cssClass="text-danger small" />
                         </div>
                         <div class="text-center">
-                            <input type="submit" class="btn btn-primary" value="Register" />
+                            <input type="submit" class="btn btn-primary" value="Add Course" />
                         </div>
                     </form:form>
                     <!-- End Form -->

@@ -56,7 +56,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Add Product</a></li>
+              <li><a class="dropdown-item" href="addproducts">Add Product</a></li>
               <li><a class="dropdown-item" href="#">Product List</a></li>
             </ul>
           </li>
