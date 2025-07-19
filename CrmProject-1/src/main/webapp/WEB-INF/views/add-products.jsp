@@ -83,7 +83,7 @@
                     <% } %>
 
                     <!-- Employee Form -->
-                    <form:form action="addempform" method="post" >
+                    <form:form action="addcourseform" method="post" modelAttribute="" >
                         <div class="mb-3">
                             <label class="form-label">Course Name</label>
                             <form:input path="coursename" cssClass="form-control" />
