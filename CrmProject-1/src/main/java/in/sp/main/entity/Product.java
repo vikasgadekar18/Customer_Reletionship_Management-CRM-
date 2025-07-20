@@ -1,25 +1,37 @@
 package in.sp.main.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class product {
+@Table(name="Product")
+public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
   private int id;
-	
+  @Column(name="course_name")
   private String coursename;
+   @Column(name="syllabus")
   private String syllabus;
+   @Column(name="original_price")
   private String originalprice;
+   @Column(name="discounted_price")
   private String discountedprice;
+   @Column(name="course_validity")
   private String coursevalidity;
+   @Column(name="course_image_url")
   private String courseimage;
+   @Column(name="trainers_name")
   private String trainersname;
+   @Column(name="trainers_details")
   private String trainersdetails;
+   @Column(name="trainers_image_url")
   private String trainersimage;
+   @Column(name="other_details")
   private String otherdetails;
   
 public String getOtherdetails() {
