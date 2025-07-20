@@ -83,7 +83,7 @@
                     <% } %>
 
                     <!-- Employee Form -->
-                    <form:form action="addcourseform" method="post" modelAttribute="" >
+                    <form:form action="addcourseform" method="post" enctype="multipart/form-data" modelAttribute="productAttr" >
                         <div class="mb-3">
                             <label class="form-label">Course Name</label>
                             <form:input path="coursename" cssClass="form-control" />
@@ -91,7 +91,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Course Syllabus</label>
-                            <form:input path="syllabus" type="email" cssClass="form-control" />
+                            <form:textarea path="syllabus" type="email" cssClass="form-control" />
                             <form:errors path="syllabus" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
@@ -111,22 +111,22 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Course Image</label>
-                            <form:input path="courseimage" cssClass="form-control" />
+                            <form:input type="file" path="courseimage" cssClass="form-control" />
                             <form:errors path="courseimage" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Trainers Details</label>
-                            <form:input path="trainersdetails" cssClass="form-control" />
+                            <form:textarea path="trainersdetails" cssClass="form-control" />
                             <form:errors path="trainersdetails" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Trainers image</label>
-                            <form:input path="trainersimage" cssClass="form-control" />
+                            <form:input type="file" path="trainersimage" cssClass="form-control" />
                             <form:errors path="trainersimage" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Other Details</label>
-                            <form:input path="otherdetails" cssClass="form-control" />
+                            <form:textarea path="otherdetails" cssClass="form-control" />
                             <form:errors path="otherdetails" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
