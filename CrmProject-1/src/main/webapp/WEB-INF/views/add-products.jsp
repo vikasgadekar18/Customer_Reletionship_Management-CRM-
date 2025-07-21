@@ -46,14 +46,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Employees</a>
                         <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" href="addemployee">Add Employee</a></li>
                             <li><a class="dropdown-item" href="emplist">Employee List</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Add Product</a></li>
-                            <li><a class="dropdown-item" href="#">Product List</a></li>
+                          
+                            <li><a class="dropdown-item" href="productslist">Product List</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
@@ -115,25 +116,28 @@
                             <form:errors path="courseimage" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Trainers Details</label>
-                            <form:textarea path="trainersdetails" cssClass="form-control" />
-                            <form:errors path="trainersdetails" cssClass="text-danger small" />
+                            <label class="form-label">Trainers Name</label>
+                            <form:input path="trainersname" cssClass="form-control" />
+                            <form:errors path="trainersname" cssClass="text-danger small" />
                         </div>
-                        <div class="mb-3">
+                         <div class="mb-3">
                             <label class="form-label">Trainers image</label>
                             <form:input type="file" path="trainersimage" cssClass="form-control" />
                             <form:errors path="trainersimage" cssClass="text-danger small" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Trainers Details</label>
+                            <form:textarea path="trainersdetails" cssClass="form-control" />
+                            <form:errors path="trainersdetails" cssClass="text-danger small" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Other Details</label>
                             <form:textarea path="otherdetails" cssClass="form-control" />
                             <form:errors path="otherdetails" cssClass="text-danger small" />
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Trainers Name</label>
-                            <form:input path="trainersname" cssClass="form-control" />
-                            <form:errors path="trainersname" cssClass="text-danger small" />
-                        </div>
+                        
+                        
+                        
                         <div class="text-center">
                             <input type="submit" class="btn btn-primary" value="Add Course" />
                         </div>
