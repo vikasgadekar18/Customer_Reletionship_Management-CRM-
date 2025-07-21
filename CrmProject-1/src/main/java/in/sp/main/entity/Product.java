@@ -1,5 +1,8 @@
 package in.sp.main.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import in.sp.main.urls.Otherurls;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -79,8 +82,8 @@ public void setCoursevalidity(String coursevalidity) {
 public String getCourseimage() {
 	return courseimage;
 }
-public void setCourseimage(String courseimage) {
-	this.courseimage = courseimage;
+public void setCourseimage(MultipartFile file) {
+	this.courseimage = Otherurls.image_upload_url +file.getOriginalFilename();
 }
 public String getTrainersname() {
 	return trainersname;
@@ -97,8 +100,8 @@ public void setTrainersdetails(String trainersdetails) {
 public String getTrainersimage() {
 	return trainersimage;
 }
-public void setTrainersimage(String trainersimage) {
-	this.trainersimage = trainersimage;
+public void setTrainersimage(MultipartFile file) {
+	this.trainersimage = Otherurls.image_upload_url +file.getOriginalFilename();
 }
   
   
