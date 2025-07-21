@@ -45,14 +45,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Employees</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="emplist">Employee List</a></li>
+                        <li><a class="dropdown-item" href="addemployee">Add Employee</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Add Product</a></li>
-                        <li><a class="dropdown-item" href="#">Product List</a></li>
+                        <li><a class="dropdown-item" href="addproducts">Add Product</a></li>
+                        <li><a class="dropdown-item" href="productslist">Product List</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
