@@ -28,5 +28,10 @@ public class ProductServiceimpl implements ProductService {
 	   
 		return productRepository.findAll();
 	}
+	@Override
+	public List<String> getAllCourseNameService() {
+		
+		return productRepository.findcoursename();
+	}
 
 }

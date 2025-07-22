@@ -47,8 +47,8 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="employeehome">Home</a></li>
-                 <li class="nav-item"><a class="nav-link" href="index">Customer Enquiry</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Customer Follow Ups</a></li>
+                 <li class="nav-item"><a class="nav-link" href="customerenquirypage">Customer Enquiry</a></li>
+                  <li class="nav-item"><a class="nav-link" href="customerfollowuppage">Customer Follow Ups</a></li>
                    <li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
 
             </ul>
