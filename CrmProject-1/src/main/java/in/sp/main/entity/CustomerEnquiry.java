@@ -26,8 +26,6 @@ public class CustomerEnquiry
 	private String enquirytype;
 	@Column(name="status")
 	private String status;
-	@Column(name="follow_up_date")
-	private String followupdate;
 	@Column(name="callto")
 	private String callto;
 	@Column(name="enquiry_date")
@@ -84,12 +82,6 @@ public class CustomerEnquiry
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
-	public String getFollowupdate() {
-		return followupdate;
-	}
-	public void setFollowupdate(String followupdate) {
-		this.followupdate = followupdate;
 	}
 	public String getCallto() {
 		return callto;
