@@ -6,5 +6,5 @@ import in.sp.main.entity.CustFollowup;
 
 public interface CustfollowRepository extends JpaRepository<CustFollowup, Integer> {
 	
-
+   CustFollowup findByPhoneno(String phoneno);
 }

@@ -12,17 +12,25 @@ public class CustFollowupimpl implements CustFollowupService {
 	@Override
 	public boolean addCustFollwupDateService(CustFollowup custFollowup) {
 		boolean status=false;
-		
+	
 		try {
 			
-			custfollowRepository.save(custFollowup);
-			status=true;
+			CustFollowup custFollowup_db = custfollowRepository.findByPhoneno(custFollowup.getPhoneno());
+			   if(custFollowup_db!= null) {
+				   custFollowup_db.setFollowupdate(custFollowup.getFollowupdate());
+				   custfollowRepository.save(custFollowup_db);
+			   }
+			   else {
+				      custfollowRepository.save(custFollowup);
+			   }
+			   status =true;
 			
-		} catch (Exception e) {
-			 status= false;
+		}
+		catch (Exception e) {
 			 
 			e.printStackTrace();
-			// TODO: handle exception
+			 status= false;
+		
 		}
 		
 		

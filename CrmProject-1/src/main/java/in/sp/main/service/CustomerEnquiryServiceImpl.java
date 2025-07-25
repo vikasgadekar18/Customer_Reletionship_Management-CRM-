@@ -1,5 +1,7 @@
 package in.sp.main.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,16 @@ public class CustomerEnquiryServiceImpl implements CustomerEnquiryService {
 	   
 	   
 		return status;
+	}
+	@Override
+	public boolean isphoneNumberExists(String phoneNumber) {
+		// TODO Auto-generated method stub
+		return custEnquiryRepository.existsByPhoneno(phoneNumber);
+	}
+	@Override
+	public List<CustomerEnquiry> getAllCustEnqHistory(String phoneno) {
+		
+		return custEnquiryRepository.findAllByPhoneno(phoneno);
 	}
 
 }
