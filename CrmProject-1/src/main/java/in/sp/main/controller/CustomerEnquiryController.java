@@ -32,9 +32,12 @@ public class CustomerEnquiryController {
 
     @Autowired
     private CustomerEnquiryService customerEnquiryService;
+    
+    
 
     @Autowired
     private CustFollowupService custFollowupService;
+    
 
     // Open Customer Enquiry Page
     @GetMapping("/customerenquirypage")
