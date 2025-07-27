@@ -33,7 +33,7 @@ public class Employee {
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be exactly 10 digits")
     private String phoneno;
 
-    // --- Getters and Setters ---
+  
 
     public int getId() {
         return id;
