@@ -12,3 +12,4 @@ public interface ProductRepository extends JpaRepository<Product,Integer>{
 	  @Query("SELECT coursename FROM Product")
        List<String>findcoursename();
 }
+
