@@ -103,8 +103,5 @@ public String getTrainersimage() {
 public void setTrainersimage(MultipartFile file) {
 	this.trainersimage = Otherurls.image_upload_url +file.getOriginalFilename();
 }
-  
-  
-  
  
 }

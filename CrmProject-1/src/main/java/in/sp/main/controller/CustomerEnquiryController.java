@@ -85,6 +85,7 @@ public class CustomerEnquiryController {
         if (status1 && status2) {
             redirectAttributes.addAttribute("redirct_success", "Customer Enquiry Details Added Successfully");
         } else {
+        	
             redirectAttributes.addAttribute("redirct_error", "Customer Enquiry Details Not Added Due To Error");
         }
 
