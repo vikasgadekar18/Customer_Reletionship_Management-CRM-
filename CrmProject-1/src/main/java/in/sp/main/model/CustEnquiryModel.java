@@ -26,3 +26,4 @@ public class CustEnquiryModel {
 		this.custFollowup = custFollowup;
 	}
 }
+
