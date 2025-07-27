@@ -62,6 +62,7 @@ public class CustomerEnquiry
 	public String getInterstedcourse() {
 		return interstedcourse;
 	}
+	
 	public void setInterstedcourse(String interstedcourse) {
 		this.interstedcourse = interstedcourse;
 	}
