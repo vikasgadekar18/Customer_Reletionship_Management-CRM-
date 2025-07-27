@@ -10,6 +10,7 @@ public class CrmProject1Application {
 		SpringApplication.run(CrmProject1Application.class, args);
 		
 		
+		
 	}
 
 }
