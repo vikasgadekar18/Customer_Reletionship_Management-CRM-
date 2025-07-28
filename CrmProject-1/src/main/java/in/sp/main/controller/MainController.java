@@ -47,8 +47,6 @@ public class MainController {
         model.addAttribute("employee", new Employee());
         return "add-employee";
     }
-
-    
     @PostMapping("/loginform")
     public String loginForm(
             @RequestParam("email1") String email,
