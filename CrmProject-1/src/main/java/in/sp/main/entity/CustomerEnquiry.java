@@ -42,6 +42,7 @@ public class CustomerEnquiry
 		this.empemail = empemail;
 	}
 	public int getId() {
+		
 		return id;
 	}
 	public void setId(int id) {
