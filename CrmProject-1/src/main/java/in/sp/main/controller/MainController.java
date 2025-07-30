@@ -53,6 +53,8 @@ public class MainController {
             @RequestParam("pass1") String password,
             Model model,
             HttpSession session
+            
+            
     ) {
         if (email.equals("admin@gmail.com") && password.equals("admin123")) {
             return "profile-admin";
