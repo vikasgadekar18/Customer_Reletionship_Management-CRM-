@@ -69,6 +69,7 @@ public class productsController {
     }
 
     
+    
     private boolean saveImage(MultipartFile file) {
         boolean status = false;
         try {

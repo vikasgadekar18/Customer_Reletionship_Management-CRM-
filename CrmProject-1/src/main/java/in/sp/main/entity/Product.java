@@ -93,6 +93,7 @@ public void setTrainersname(String trainersname) {
 }
 public String getTrainersdetails() {
 	return trainersdetails;
+	
 }
 public void setTrainersdetails(String trainersdetails) {
 	this.trainersdetails = trainersdetails;
