@@ -67,7 +67,6 @@ public class productsController {
 
         return "redirect:/addproducts";
     }
-
     private boolean saveImage(MultipartFile file) {
         boolean status = false;
         try {
