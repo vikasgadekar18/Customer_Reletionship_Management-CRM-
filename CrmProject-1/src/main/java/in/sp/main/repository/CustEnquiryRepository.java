@@ -9,5 +9,5 @@ import java.util.List;
 public interface CustEnquiryRepository extends JpaRepository<CustomerEnquiry, Integer> {
   boolean existsByPhoneno(String phoneno);
   List<CustomerEnquiry> findAllByPhoneno(String phoneno);
-  
+   
 }
