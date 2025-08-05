@@ -87,7 +87,6 @@ public class CustomerEnquiryController {
         } else {
         	
         
-        	
             redirectAttributes.addAttribute("redirct_error", "Customer Enquiry Details Not Added Due To Error");
         }
 
