@@ -8,4 +8,5 @@ public interface CustfollowRepository extends JpaRepository<CustFollowup, Intege
 	
    CustFollowup findByPhoneno(String phoneno);
    
+   
 }
