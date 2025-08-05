@@ -31,7 +31,7 @@ public class Employee {
 
     @NotBlank(message = "Phone number is required")
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be exactly 10 digits")
-    private String phoneno;
+    private String phoneno; 
 
     public int getId() {
         return id;
