@@ -34,7 +34,6 @@
 							<li><a class="dropdown-item" href="adddproducts">Add Product</a></li>
 							<li><a class="dropdown-item" href="productslist">Product List</a></li>
 						</ul></li>
-					<li class="nav-item"><a class="nav-link" href="#">Complaints</a>
 					</li>
 				</ul>
 			</div>
