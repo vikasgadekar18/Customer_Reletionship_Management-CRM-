@@ -45,7 +45,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="employeehome">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="customerenquirypage">Customer Enquiry</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Complaints</a></li>
+                <li class="nav-item"><a class="nav-link" href="salecourse">Sale Course</a></li>
             </ul>
         </div>
     </div>
