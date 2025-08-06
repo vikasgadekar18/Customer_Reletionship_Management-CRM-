@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import in.sp.main.entity.Product;
+import in.sp.main.entity.SaleCourse;
 import in.sp.main.service.ProductService;
 
 @Controller
@@ -92,11 +93,18 @@ public class productsController {
         }
         return status;
     }
-
+     
     @GetMapping("/productslist")
     public String openProductListPage(Model model) {
         List<Product> list_product = productService.getallproductsListService();
         model.addAttribute("model_products_list", list_product);
         return "products-list";
+    }
+    @GetMapping("/salecourse")
+    public String opensalecoursepage(Model model) {
+    	  List<String> courseNames = productService.getAllCourseNameService();
+          model.addAttribute("model_coursename_list", courseNames); 
+          model.addAttribute("modelSaleCourseAttr",new SaleCourse());
+    	return "sale-course";
     }
 }
