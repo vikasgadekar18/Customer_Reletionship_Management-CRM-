@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import in.sp.main.entity.Employee;
 import in.sp.main.service.EmpService;
-
+import in.sp.main.service.ProductService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
@@ -128,6 +128,7 @@ public class MainController {
         }
         return "redirect:/emplist";
     }
+    
 
     @PostMapping("/updateemployee")
     public String updateEmployee(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
@@ -145,9 +146,13 @@ public class MainController {
 
         return "redirect:/emplist";
     }
+    @Autowired
+    ProductService productService;
     @GetMapping("employeehome")
-    public String openemphome() {
-    	return"home-employee";
+    public String openemphome(Model model) {
+    List<Object[]> list	=productService.getcountbypurchasedcourseservice();
+       model.addAttribute("model_count_course_sale",list);
+    	return"profile-employee";
     }
     
 

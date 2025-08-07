@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -92,13 +93,29 @@ public class CustomerEnquiryController {
 
     // Customer Follow-up Page (basic)
     @GetMapping("/customerfollowuppage")
-    public String openCustomerFollowupPage() {
-        return "customer-followups";
+    public String openCustomerFollowupPage(Model model,
+            @RequestParam(name = "selectedDate", required = false) String selectedDate) {
+
+        String dateToUse;
+
+        if (selectedDate != null && !selectedDate.trim().isEmpty()) {
+            // Use selected date from the user
+            dateToUse = selectedDate;
+        } else {
+            // Use current date if no date is selected
+            LocalDate today = LocalDate.now();
+            dateToUse = today.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        }
+
+        // Fetch follow-up list for the determined date
+        List<CustFollowup> list_followups = custFollowupService.getFollowupForProvidedDate(dateToUse);
+        model.addAttribute("model_followups", list_followups);
+
+        return "customer-followups";  // JSP file name (customer-followups.jsp)
     }
 
-    // Load Customer Enquiry History by phone number
     @GetMapping("/custEnquiryHistoryPage")
-    public String openCustomerEnquiryHistoryPage(@RequestParam("phno") String phoneno, Model model) {
+    public String openCustomerEnquiryHistoryPage(@RequestParam("phoneno") String phoneno, Model model) {
         List<CustomerEnquiry> enquiryHistory = customerEnquiryService.getAllCustEnqHistory(phoneno);
         List<String> courseNames = productService.getAllCourseNameService();
 
@@ -106,6 +123,8 @@ public class CustomerEnquiryController {
         model.addAttribute("model_coursename_list", courseNames); // for course dropdown
         model.addAttribute("modelCustEnquiryAttr", new CustEnquiryModel()); // for form
 
-        return "custenq-history"; // JSP page
+        return "custenq-history"; 
     }
+
+ 
 }

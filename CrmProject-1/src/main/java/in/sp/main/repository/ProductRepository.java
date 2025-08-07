@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 
 import in.sp.main.entity.Product;
 
-public interface ProductRepository extends JpaRepository<Product,Integer>{
-	
-	  @Query("SELECT coursename FROM Product")
-       List<String>findcoursename();
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+
+    // 1. Custom JPQL to get only course names
+    @Query("SELECT p.coursename FROM Product p")
+    List<String> findcoursename();
+
+    // 2. Auto-implemented by Spring Data JPA: find by course name
+    Product findByCoursename(String coursename);
 }
-
-
