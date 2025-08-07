@@ -1,5 +1,7 @@
 package in.sp.main.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +37,11 @@ public class CustFollowupimpl implements CustFollowupService {
 		
 		
 		return status;
+	}
+	@Override
+	public List<CustFollowup> getFollowupForProvidedDate(String date) {
+		 return custfollowRepository.findByFollowupdate(date);
+		
 	}
 
 }
