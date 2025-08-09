@@ -25,6 +25,7 @@ public class CustEnquiryModel {
 	public void setCustFollowup(CustFollowup custFollowup) {
 		this.custFollowup = custFollowup;
 	}
+	
 }
 
 
