@@ -36,7 +36,7 @@ public class Product {
   private String trainersimage;
    @Column(name="other_details")
   private String otherdetails;
-  
+   
 public String getOtherdetails() {
 	return otherdetails;
 }
