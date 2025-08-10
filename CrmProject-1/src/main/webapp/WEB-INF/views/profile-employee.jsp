@@ -88,6 +88,7 @@
   }
 %>
 
+
 <script>
   const xValues = [<%= xValues.toString() %>];
   const yValues = [<%= yValues.toString() %>];
