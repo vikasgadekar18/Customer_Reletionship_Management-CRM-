@@ -32,6 +32,7 @@
                 }
             });
         }
+        
 
         function custEnquiryHistory(phoneNumber) {
             if (phoneNumber && phoneNumber.trim() !== '') {
