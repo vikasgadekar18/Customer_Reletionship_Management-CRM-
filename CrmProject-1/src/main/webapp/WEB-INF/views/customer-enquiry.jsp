@@ -145,6 +145,7 @@
                         <input type="text" name="customerEnquiry.name" id="nameinput" class="form-control" value="${modelCustEnquiryAttr.customerEnquiry.name}">
                         <small class="text-danger">${errors['customerEnquiry.name']}</small>
                     </div>
+                    
 
                     <!-- Interested Course -->
                     <div class="mb-3">
