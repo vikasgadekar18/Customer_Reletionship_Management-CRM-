@@ -32,6 +32,7 @@ public class CustomerEnquiryController {
     private ProductService productService;
 
     
+    
     @Autowired
     private CustomerEnquiryService customerEnquiryService;
 
