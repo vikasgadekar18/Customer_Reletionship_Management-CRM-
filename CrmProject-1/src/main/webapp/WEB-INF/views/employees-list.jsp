@@ -36,7 +36,6 @@
     </div>
 </div>
 
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container justify-content-center">
