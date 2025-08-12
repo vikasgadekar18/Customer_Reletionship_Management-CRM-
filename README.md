@@ -1,15 +1,21 @@
 📌 Customer Relationship Management (CRM) System
+
 A Java Spring Boot powered Customer Relationship Management web application for managing customers, tracking products/courses, and organizing sales workflows efficiently.
 
 This project demonstrates Java Full Stack Development with Spring Boot (Backend), MySQL (Database), and HTML/CSS/JS + Bootstrap (Frontend), along with REST APIs for seamless data exchange.
-
 🚀 Features
 ✅ User Authentication & Authorization (Spring Security)
+
 ✅ Customer Management (Add, View, Edit, Delete)
+
 ✅ Product & Course Tracking
+
 ✅ AJAX-based Dynamic Course Details Fetching
+
 ✅ Image Upload for Customer Profiles
+
 ✅ Responsive Bootstrap UI
+
 ✅ REST API Endpoints for integration with other services
 
 🛠 Tech Stack
@@ -22,13 +28,13 @@ Tools & Others: Git & GitHub, Maven, Lombok
 bash
 Copy
 Edit
-Customer_Reletionship_Management-CRM-/
-│── src/main/java/com/scm/    # Java source code (controllers, services, entities)
-│── src/main/resources/       # Templates, static resources, configs
-│── pom.xml                   # Maven dependencies
-│── README.md                 # Project documentation
+Customer_Relationship_Management-CRM-/
+│── src/main/java/com/scm/       # Java source code (controllers, services, entities)
+│── src/main/resources/          # Templates, static resources, configs
+│── pom.xml                      # Maven dependencies
+│── README.md                    # Project documentation
 ⚡ Getting Started
-1️⃣ Clone the repository
+1️⃣ Clone the Repository
 bash
 Copy
 Edit
@@ -56,5 +62,4 @@ Copy
 Edit
 mvn clean install
 mvn spring-boot:run
-The application will run on: http://localhost:8080
-
+Access the app at: http://localhost:8080
