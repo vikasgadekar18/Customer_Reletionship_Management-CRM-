@@ -24,17 +24,14 @@ Frontend: HTML5, CSS3, JavaScript, Bootstrap, AJAX
 Database: MySQL
 Tools & Others: Git & GitHub, Maven, Lombok
 
-📂 Project Structure
-bash
-Copy
-Edit
-Customer_Relationship_Management-CRM-/
-│── src/main/java/com/scm/       # Java source code (controllers, services, entities)
-│── src/main/resources/          # Templates, static resources, configs
-│── pom.xml                      # Maven dependencies
-│── README.md                    # Project documentation
+Project Structure:
+Customer_Reletionship_Management-CRM-/
+│── src/main/java/com/scm/    # Java source code (controllers, services, entities)
+│── src/main/resources/       # Templates, static resources, configs
+│── pom.xml                   # Maven dependencies
+│── README.md                 # Project documentation
 ⚡ Getting Started
-1️⃣ Clone the Repository
+1️⃣ Clone the repository
 bash
 Copy
 Edit
@@ -62,4 +59,7 @@ Copy
 Edit
 mvn clean install
 mvn spring-boot:run
-Access the app at: http://localhost:8080
+The application will run on: http://localhost:8080
+
+
+
