@@ -12,4 +12,5 @@ public interface CustfollowRepository extends JpaRepository<CustFollowup, Intege
    List<CustFollowup> findByFollowupdate(String followupdate);
    
    
+   
 }
