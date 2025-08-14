@@ -15,4 +15,5 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     // 2. Auto-implemented by Spring Data JPA: find by course name
     Product findByCoursename(String coursename);
+    
 }
