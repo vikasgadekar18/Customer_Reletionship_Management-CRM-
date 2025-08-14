@@ -10,6 +10,8 @@ import in.sp.main.entity.SaleCourse;
 public interface SaleCourseRepository  extends JpaRepository<SaleCourse, Integer>{
 	
 	@Query("SELECT date, COUNT(id) FROM SaleCourse GROUP BY date")
+	
+	
 	List<Object[]> countBypurchaseddate();
 	
 
