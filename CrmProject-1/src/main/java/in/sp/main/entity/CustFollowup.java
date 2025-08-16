@@ -22,6 +22,7 @@ public class CustFollowup {
 	}
  
 	
+	
 	public void setId(int id) {
 		this.id = id;
 	}
