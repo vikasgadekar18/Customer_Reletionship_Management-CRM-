@@ -98,6 +98,7 @@ public class CustomerEnquiryController {
 
         String dateToUse;
 
+        
         if (selectedDate != null && !selectedDate.trim().isEmpty()) {
             // Use selected date from the user
             dateToUse = selectedDate;
