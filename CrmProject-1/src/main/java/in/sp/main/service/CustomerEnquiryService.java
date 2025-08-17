@@ -11,4 +11,5 @@ public interface CustomerEnquiryService {
 	public boolean isphoneNumberExists(String phoneNumber);
 	public List<CustomerEnquiry> getAllCustEnqHistory(String phoneno);
 	
+	
 }
