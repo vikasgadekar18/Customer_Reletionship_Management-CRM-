@@ -22,4 +22,5 @@ public interface ProductService {
     // Save a course sale entry
     public boolean addsaleCourseDetailsService(SaleCourse saleCourse);
     public List<Object[]> getcountbypurchasedcourseservice();
+    
 }
